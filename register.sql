@@ -24,10 +24,11 @@ DROP TABLE IF EXISTS `login`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `login` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
+  `password` varchar(90) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +37,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'prabin@ggmail.com','$2y$10$hxyMLGDE9PiJ.qJ6U8uF1.sTKZEhG6l.A4.952P4X4tcfevR75hD6');
+INSERT INTO `login` VALUES (1,'sandesh rai','sandesh@gmail.com','$2y$10$1/.nNul3RmWqYRogvWEkC.xpVHGY45eNGNSy0ekk.4Lf.lrSyCsZ.'),(2,'sandesh rai','sandesh@gmail.com','$2y$10$O0jArEkekFO4K3BWREo1UeNp7gE383Cu8FqhUEuQtL20Ci6k5YR0e'),(3,'sandesh rai','sandesh@gmail.com','$2y$10$hbPY/HFv2a6BnjK11LGq1uDUnO5MX0gZEg3CfVfCj7BNlb9rgO00q'),(4,'sandesh rai','sandesh@gmail.com','$2y$10$toOGpYyb7LxUAicRpFB8XuZKsQ05vP693jSFfpRv9u535yAx4MLrm');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-01  9:00:37
+-- Dump completed on 2023-06-05  9:03:17
