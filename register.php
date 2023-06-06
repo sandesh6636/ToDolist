@@ -31,6 +31,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +41,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
   <title>Registration Page</title>
   <link rel="stylesheet" href="static\css\register.css">
 </head>
-
 <body>
   <div class="header">
     <nav>
@@ -49,13 +49,21 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     </nav>
 
     <p class="fact">Did you know that maintaining a to-do list can help improve productivity and reduce stress? It's a great way to stay organized and prioritize tasks!</p>
+    <div class="image">
+      <div class="org-img">
+        <img src="static\images\org.jpg" alt="" class="organized-image">
+        <p class="image-caption">Organize Your Work</p>
+      </div>
+
+    </div>
   </div>
   <div class="wrapper">
-    <h3>Register here:</h3>
-    <form action="" method="POST">
+
+      <h3>Register here: </h3>
+    <form action=" " method="POST">
       <div class="input-box">
         <span class="icon"></span>
-        <input type="text" name="username" id="username" placeholder="username">
+        <input type="text" name="username" id="username" placeholder="Username">
         <label for="username">Username</label>
       </div>
       <div class="input-box">
@@ -75,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
       </div>
       <button type="submit">Register</button>
     </form>
-    <p>Already have an account? <a href="/todolist/login.php">Login here</a></p>
+    <p>Already have an account? <a href="login.php">Login here</a></p>
   </div>
 
 
