@@ -1,37 +1,30 @@
 <?php
-// include("conn.php");
-// if($_SERVER["REQUEST_METHOD"]=="POST"){
-//     if (!isset($_POST["email"]) || !isset($_POST["password"]) || !isset($_POST["cpassword"])){
-//         echo "all filds must be filled";
 
-//     }
-//     else{
-
-//         $email=$_POST["email"];
-//         $password=$_POST["password"];
-//         $cpassword=$_POST["cpassword"];
-//         if($password!=$cpassword){
-//             echo"password and conform password not matched";
-//         }else{
-
-//             $hasted_password=password_hash($password,PASSWORD_BCRYPT);
-//             $qry="INSERT INTO login(email,password) VALUES('$email','$hasted_password')";
-
-//             $res=mysqli_query($conn,$qry);
-
-//             if(!$res){
-//                 echo "Failed to register";
-//                 echo mysqli_error($conn);
-//                 die(); 
-//             }else{
-//                 echo "Register Sucessfully";
-//             }
-//         }
-
-//     }
+// session_start();
+// // check if the user is already logged in
+// if(isset($_SESSION['username']))
+// {
+//     header("location:main.php");
+//     exit;
 // }
+// require_once "conn.php";
+
+// $username = $password = "";
+// $err = "";
+// if ($_SERVER['REQUEST_METHOD'] == "POST"){
+//   if(empty(trim($_POST['username'])) || empty(trim($_POST['password'])))
+//   {
+//       $err = "Please enter username + password";
+//   }
+//   else{
+//       $username = trim($_POST['username']);
+//       $password = trim($_POST['password']);
+//   }
+  
+
 
 ?>
+
 
 
 <!DOCTYPE html>
