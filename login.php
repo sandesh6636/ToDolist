@@ -1,29 +1,38 @@
 <?php
-
-// session_start();
-// // check if the user is already logged in
-// if(isset($_SESSION['username']))
-// {
-//     header("location:main.php");
-//     exit;
-// }
-// require_once "conn.php";
-
-// $username = $password = "";
-// $err = "";
-// if ($_SERVER['REQUEST_METHOD'] == "POST"){
-//   if(empty(trim($_POST['username'])) || empty(trim($_POST['password'])))
-//   {
-//       $err = "Please enter username + password";
-//   }
-//   else{
-//       $username = trim($_POST['username']);
-//       $password = trim($_POST['password']);
-//   }
-  
-
-
+session_start();
+$msg="";
+if (isset($_SESSION['username'])) {
+    header("location: main.php");
+    exit();
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    require_once("conn.php");
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $email_search = "SELECT * FROM login WHERE email='$email'";
+    $qry = mysqli_query($conn, $email_search);
+    $email_count = mysqli_num_rows($qry);
+    if ($email_count) {
+        $email_pass = mysqli_fetch_assoc($qry);
+        $db_pass = $email_pass['password'];
+        $pass_decode = password_verify($password, $db_pass);
+        if ($pass_decode) {
+            echo "Login successful";
+            $_SESSION["username"] = $username;
+            $_SESSION["id"] = $id;
+            $_SESSION["loggedin"] = true;
+            header("location:main.php");
+        } else {
+          $msg="<div class='alert >Incorrect Password</div>";
+          
+        }
+    } else {
+        echo "Invalid email";
+    }
+}
 ?>
+
+
 
 
 
@@ -78,6 +87,9 @@
         </p>
 
       </div>
+      <?php
+      echo $msg;
+      ?>
     </form>
   </div>
 </body>
