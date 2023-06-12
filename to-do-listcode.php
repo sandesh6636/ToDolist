@@ -80,8 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 
 </html>
-सन्देश
-सन्देश राई
 var importantTaskCount = 0; // Track the number of important tasks added
 var normalTaskCount = 0; // Track the number of normal tasks added
 

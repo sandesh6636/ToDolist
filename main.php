@@ -1,7 +1,4 @@
 <?php
-
-
-
 session_start();
 
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
@@ -15,47 +12,76 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Todo List</title>
-  <link rel="stylesheet" href="static\css\main.css"/>
 </head>
 
+</head>
+<link rel="stylesheet" href="static\css\Main.css">
 <body>
   <header>
-  <button type="submit" class="btn-login">
-    <a href="logout.php">
-
-      Logout
-    </a>
+    <!-- Header content here -->
+    <h2 class="logo"><a href="">2Do List</a></h2>
+    <nav class="navigation">
+      <a href="#">Home</a>
+      <a href="#">About us</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <button type="submit" class="btn-login">
+      <a href="logout.php">Logout</a>   
       </button>
-    <div class="container">
-      <h1 class="header">Todo List</h1>
-      <form action="" method="POST">
-        <div class="task-container">
-          <input type="text" id="imp-task-add" name="imp-task" placeholder="Important Task">
-          <button type="submit">Add</button>
+    </nav>
+  </header>
+  <div class="welcom-section">
+    <!-- Welcome section content here -->
+  </div>
+  <div class="add-task-cointainer">
+    <div class="wrapper">
+      <h3>Add Important Task:</h3>
+      <form id="important-task-form">
+        <div class="input-box">
+          <input type="text" id="important-task-add" name="importantTask" placeholder="Important Task" required>
+
         </div>
-        <div class="task-container">
-          <input type="text" id="task-add" name="task" placeholder="Task">
-          <button type="submit">Add</button>
+        <div class="input-box">
+          <input type="text" id="important-task-description" name="importantDes" placeholder="Description">
+
         </div>
-        <h3><?php echo "Welcome ". $_SESSION['username']?>! You can now use this website</h3>
+        <button type="submit" class="add-btn" onclick="addImportantTask(event)">Add</button>
+     
+    </div>
+    <div class="wrapper">
+      <h3>Add Normal Task:</h3>
+     
+        <div class="input-box">
+          <input type="text" id="normal-task-add" name="normalTask"placeholder="Normal Task" required>
+
+        </div>
+        <div class="input-box">
+          <input type="text" id="normal-task-description" name="normalDes"placeholder="Description">
+
+        </div>
+        <button type="submit" class="add-btn" onclick="addNormalTask(event)">Add</button>
       </form>
     </div>
-  <section class="task-list">
-    <div class="container">
-      <h2 class="header">Tasks to Do</h2>
-      <div class="task">
-        <div class="content">
-          <input type="text" class="text" value="A new task" readonly>
-        </div>
-        <div class="actions">
-          <button class="edit">Edit</button>
-          <button class="delete">Delete</button>
-        </div>
-  </section>
+  </div>
+  <div class="task-list-cointainer">
+    <div class="task-list">
+      <h3>Important Task 2DO:</h3>
+      <div id="important-task-list">
+
+      </div>
+    </div>
+    <div class="task-list">
+      <h3>Normal Task 2DO:</h3>
+      <div id="normal-task-list">
+
+      </div>
+    </div>
+  </div>
+ 
+<script src="static\js\main.js"></script>
 
 </body>
 
