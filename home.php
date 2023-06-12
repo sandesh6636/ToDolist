@@ -42,7 +42,7 @@
   </main>
   <div class="second-section">
     <div class="img-1">
-      <img src="/org.jpg" alt="">
+      <img src="static/images/org.jpg" alt="">
     </div>
     <p class="benifit"><strong>Organization and Time Management: </strong><br>A to-do list helps you stay organized by providing a clear overview of tasks and priorities. It helps you manage your time effectively and ensures that important tasks are not overlooked or forgotten.</p>
   </div>
@@ -50,7 +50,7 @@
   <div class="second-section">
     <p class="benifit"><strong>Stress Reduction:</strong><br> Keeping track of tasks and having a plan in place reduces stress and anxiety. With a to-do list, you can have peace of mind, knowing that you have a clear roadmap to follow and that important tasks are accounted for.</p>
     <div class="img-2">
-      <img src="/rlx.jpg" alt="">
+      <img src="static/images/rdc.jpg" alt="">
     </div>
   </div>
   <div class="trust">
