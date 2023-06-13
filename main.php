@@ -1,62 +1,124 @@
 <?php
-
-
-
 session_start();
-
+require_once("conn.php");
+$msg="";
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 {
     header("location:login.php");
 }
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $userId=$_SESSION['id'];
+    $importantTask= $_POST['importantTask'];
+    $importantDec = $_POST['importantDec'];
+    $normalTask = $_POST['normalTask'];
+    $normalDec = $_POST['normalDec'];
+    $qry="INSERT INTO tasks(userId,impTaskTittle,impTaskDec,norTaskTittle,norTaskDec) VALUES('$userId','$importantTask','$importantDec','$normalTask','$noramlDec')";
+    $res=mysqli_query($conn,$qry);
+    if($res){
+    
+      $msg= '<div class="alert alert-primary alert-dismissible fade show" role="alert">
+      <strong>Task Added sucessfully</strong> 
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
+    }else{
+      
+      $msg= '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>Task cant Added sucessfully</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
+    }
+     
+}
+
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Todo List</title>
-  <link rel="stylesheet" href="static\css\main.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo List</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+<link rel="stylesheet" href="static\css\Main.css">
 
 <body>
-  <header>
-  <button type="submit" class="btn-login">
-    <a href="logout.php">
-
-      Logout
-    </a>
-      </button>
-    <div class="container">
-      <h1 class="header">Todo List</h1>
-      <form action="" method="POST">
-        <div class="task-container">
-          <input type="text" id="imp-task-add" name="imp-task" placeholder="Important Task">
-          <button type="submit">Add</button>
-        </div>
-        <div class="task-container">
-          <input type="text" id="task-add" name="task" placeholder="Task">
-          <button type="submit">Add</button>
-        </div>
-        <h3><?php echo "Welcome ". $_SESSION['username']?>! You can now use this website</h3>
-      </form>
+    <header>
+        <!-- Header content here -->
+        <h2 class="logo"><a href="home.php">2Do List</a></h2>
+        <nav class="navigation">
+            <a href="home.php">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button type="submit" class="btn-login">
+                <a href="logout.php">Logout</a>
+            </button>
+        </nav>
+    </header>
+    <div class="welcom-section">
+        <!-- Welcome section content here -->
     </div>
-  <section class="task-list">
-    <div class="container">
-      <h2 class="header">Tasks to Do</h2>
-      <div class="task">
-        <div class="content">
-          <input type="text" class="text" value="A new task" readonly>
-        </div>
-        <div class="actions">
-          <button class="edit">Edit</button>
-          <button class="delete">Delete</button>
-        </div>
-  </section>
+    <div class="add-task-cointainer">
+        <div class="wrapper">
+            <h3>Add Important Task:</h3>
 
+            <form id="important-task-form" action="" method="POST">
+                <div class="input-box">
+                    <input type="text" id="important-task-add" name="importantTask" placeholder="Important Task"
+                        required>
+
+                </div>
+                <div class="input-box">
+                    <input type="text" id="important-task-description" name="importantDes" placeholder="Description">
+
+                </div>
+                <button type="submit" class="add-btn" onclick="addImportantTask(event)">Add</button>
+
+        </div>
+        <div class="wrapper">
+            <h3>Add Normal Task:</h3>
+
+            <div class="input-box">
+                <input type="text" id="normal-task-add" name="normalTask" placeholder="Normal Task" required>
+
+            </div>
+            <div class="input-box">
+                <input type="text" id="normal-task-description" name="normalDes" placeholder="Description">
+
+            </div>
+            <button type="submit" class="add-btn" onclick="addNormalTask(event)">Add</button>
+            <?php
+           echo "$msg";
+             ?>
+            </form>
+        </div>
+    </div>
+    <div class="task-list-cointainer">
+        <div class="task-list">
+            <h3>Important Task 2DO:</h3>
+            <div id="important-task-list">
+
+            </div>
+        </div>
+        <div class="task-list">
+            <h3>Normal Task 2DO:</h3>
+            <div id="normal-task-list">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="static\js\main.js"></script>
 </body>
 
 </html>

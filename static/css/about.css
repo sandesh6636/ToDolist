@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100;300&family=Rubik+Pixels&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@600&family=Montserrat:wght@100&family=Roboto:wght@100;300&family=Rubik+Pixels&display=swap');
+:root {
+  --dark-color: #00203FFF;
+  --darker-color: #084C61FF;
+  --darkest-color: #07689F;
+  --light-color: #B5D9EB;
+  --lighter-color: #CEE6F2;
+  --lightest-color: #FEFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  padding-top:100px;
+}
+    header { 
+       display: flex; 
+       position: fixed; 
+       top: 0; 
+       left: 0; 
+       width: 100%; 
+       padding: 20px 30px; 
+       justify-content: space-between; 
+       align-items: center; 
+       z-index: 99; 
+       background-color: var(--lightest-color); 
+  
+     } 
+  
+     .logo { 
+       font-size: 2rem; 
+  
+     } 
+  
+     .logo a { 
+       text-decoration: none; 
+       color: var(--dark-color); 
+       font-family: Arial, sans-serif; 
+       font-family: 'Montserrat', sans-serif; 
+       font-weight: bold; 
+     } 
+  
+     .navigation a { 
+       position: relative; 
+       color: var(--dark-color); 
+       margin-left: 40px; 
+       font-family: 'Geologica', sans-serif; 
+       font-size: 20px; 
+       text-decoration: none; 
+     } 
+  
+     .navigation .btn-login { 
+       width: 130px; 
+       height: 50px; 
+       background: transparent; 
+       border: 2px solid var(--dark-color); 
+       background-color: var(--dark-color); 
+       border-radius: 17px; 
+       color: var(--lightest-color); 
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+       margin-left: 40px; 
+       transition: .5s; 
+     } 
+  
+     .navigation .btn-login:hover { 
+       /* background-color: var(--lightest-color); */ 
+       color: var(--dark-color); 
+     } 
+  
+     .navigation .btn-login a { 
+       color: var(--lightest-color); 
+       margin: 0; 
+     } 
+  
+     .navigation a::after { 
+       content: ''; 
+       position: absolute; 
+       width: 100%; 
+       height: 4px; 
+       background: var(--darker-color); 
+       border-radius: 5px; 
+       left: 0; 
+       bottom: -6px; 
+       transform: scaleX(0); 
+       transition: transform .4s; 
+       transform-origin: right; 
+     } 
+  
+     .navigation a:hover::after { 
+       transform-origin: left; 
+       transform: scaleX(1); 
+     } 
+ 
+
+.about {
+  width: 100%;
+  padding: 78px 0;
+  background-color: var(--lightest-color);
+}
+
+.about img {
+  width: auto;
+  height: 420px;
+}
+
+.about .text {
+  
+  width: 550px;
+}
+
+.main {
+  width: 1130px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about .text h1 {
+         font-family: 'Montserrat', sans-serif; 
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.about .text h5 {
+         font-family: 'Montserrat', sans-serif; 
+  font-size: 29px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.about .text a {
+  text-decoration: none;
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+.about .text span {
+  color: var(--darkest-color);
+}
+
+.about .text p {
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 19px;
+  margin-bottom: 48px;
+}
+
+.about .main .text button {
+  background-color: var(--dark-color);
+  color: var(--lightest-color);
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 12px 13px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.about .main .text button:hover {
+  background-color: transparent;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  cursor: pointer;
+}
+
+.key-features {
+  
+  margin-top: 50px;
+  font-size:20px;
+}
+
+.key-features h2 {
+         font-family: 'Montserrat', sans-serif; 
+  font-size: 36px;
+  text-transform:capitalize;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.key-features ul {
+  list-style-type: disc;
+  text-transform:capitalize;
+  letter-spacing:1px;
+  margin-left: 40px;
+  margin-bottom:40px;
+  font-size: 19px;
+  line-height: 32px;
+}
+
+.team-section {
+  margin-top: 50px;
+}
+
+.team-section h2 {
+         font-family: 'Montserrat', sans-serif; 
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform:capitalize;
+  letter-spacing:2px;
+  font-weight:bold;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform:capitalize;
+  margin-bottom: 53px;
+  margin-left:107px;
+}
+
+.team-member img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.team-member button{
+background-color: var(--darkest-color);
+  color: var(--lightest-color);
+  text-decoration:
+
+none;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 12px 13px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.team-member button:hover{
+  background-color: transparent;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  cursor: pointer;
+}
+.team-member button a{
+  text-decoration:none;
+  color:var(--lightest-color);
+}
+
+.team-member button a:hover{
+  color:var(--dark-color);
+  
+}
+.team-member div {
+  flex-grow: 1;
+}
+
+.team-member h3 {
+  font-family: 'Montserrat', sans-serif; 
+  text-transform:capitalize;
+  letter-spacing:2px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  text-transform:capitalize;
+  letter-spacing:1px;
+  font-size: 19px;
+  line-height: 28px;
+}
+.thank-you-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.thank-you-section p {
+  text-transform:capitalize;
+  letter-spacing:1px;
+  font-size: 19px;
+  line-height: 28px;
+}
+
+.thank-you-section span {
+  font-weight: bold;
+}
+.thank-you-section span a{
+  text-decoration:none;
+  color:var(--darkest-color);
+}

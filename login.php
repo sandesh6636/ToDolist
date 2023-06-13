@@ -23,7 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["loggedin"] = true;
             header("location:main.php");
         } else {
-          $msg="<div class='alert >Incorrect Password</div>";
+          $msg= '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert" >
+            <strong>Incorrect password</strong> check your password and try again,
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
           
         }
     } else {
@@ -43,14 +46,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login Page</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="static\css\login.css">
 </head>
 
 <body>
   <header>
-    <h2 class="logo"><a href="">2Do List</a></h2>
+    <h2 class="logo"><a href="home.php">2Do List</a></h2>
     <nav class="navigation">
-      <a href="#">Home</a>
+      <a href="home.php">Home</a>
       <a href="#">About us</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
