@@ -66,60 +66,60 @@ function createTaskElement(taskName, taskDescription) {
 
 // Function to add an important task
 function addImportantTask(event) {
-  event.preventDefault();
+//   event.preventDefault();
 
-  if (importantTaskCount >= 2) {
-    // Maximum number of important tasks reached
-    alert('You can only add 2 important tasks.');
-    return;
-  }
+//   if (importantTaskCount >= 2) {
+//     // Maximum number of important tasks reached
+//     alert('You can only add 2 important tasks.');
+//     return;
+//   }
 
-  // Get input values
-  var taskName = document.getElementById('important-task-add').value;
-  var taskDescription = document.getElementById('important-task-description').value;
+//   // Get input values
+//   var taskName = document.getElementById('important-task-add').value;
+//   var taskDescription = document.getElementById('important-task-description').value;
 
-  // Create a new task element
-  var taskElement = createTaskElement(taskName, taskDescription);
+//   // Create a new task element
+//   var taskElement = createTaskElement(taskName, taskDescription);
 
-  // Append the task element to the important task list
-  var taskList = document.getElementById('important-task-list');
-  taskList.appendChild(taskElement);
-  var horizontalRule = document.createElement('hr');
-  taskList.appendChild(horizontalRule);
-  // Clear input fields
-  document.getElementById('important-task-add').value = '';
-  document.getElementById('important-task-description').value = '';
+//   // Append the task element to the important task list
+//   var taskList = document.getElementById('important-task-list');
+//   taskList.appendChild(taskElement);
+//   var horizontalRule = document.createElement('hr');
+//   taskList.appendChild(horizontalRule);
+//   // Clear input fields
+//   document.getElementById('important-task-add').value = '';
+//   document.getElementById('important-task-description').value = '';
 
-  importantTaskCount++; // Increment the important task count
+//   importantTaskCount++; // Increment the important task count
 }
 
 // Function to add a normal task
 function addNormalTask(event) {
-  event.preventDefault();
+//   event.preventDefault();
 
-  if (normalTaskCount >= 5) {
-    // Maximum number of normal tasks reached
-    alert('You can only add 5 normal tasks.');
-    return;
-  }
+//   if (normalTaskCount >= 5) {
+//     // Maximum number of normal tasks reached
+//     alert('You can only add 5 normal tasks.');
+//     return;
+//   }
 
-  // Get input values
-  var taskName = document.getElementById('normal-task-add').value;
-  var taskDescription = document.getElementById('normal-task-description').value;
+//   // Get input values
+//   var taskName = document.getElementById('normal-task-add').value;
+//   var taskDescription = document.getElementById('normal-task-description').value;
 
-  // Create a new task element
-  var taskElement = createTaskElement(taskName, taskDescription);
+//   // Create a new task element
+//   var taskElement = createTaskElement(taskName, taskDescription);
 
-  // Append the task element to the normal task list
-  var taskList = document.getElementById('normal-task-list');
-  taskList.appendChild(taskElement);
-  var horizontalRule = document.createElement('hr');
-  taskList.appendChild(horizontalRule);
-  // Clear input fields
-  document.getElementById('normal-task-add').value = '';
-  document.getElementById('normal-task-description').value = '';
+//   // Append the task element to the normal task list
+//   var taskList = document.getElementById('normal-task-list');
+//   taskList.appendChild(taskElement);
+//   var horizontalRule = document.createElement('hr');
+//   taskList.appendChild(horizontalRule);
+//   // Clear input fields
+//   document.getElementById('normal-task-add').value = '';
+//   document.getElementById('normal-task-description').value = '';
 
-  normalTaskCount++; // Increment the normal task count
+//   normalTaskCount++; // Increment the normal task count
 
 
 }

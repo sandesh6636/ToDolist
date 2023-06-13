@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +12,9 @@
 
 <body>
   <header>
-    <h2 class="logo"><a href="">2Do List</a></h2>
+    <h2 class="logo"><a href="home.php">2Do List</a></h2>
     <nav class="navigation">
-      <a href="#">Home</a>
+      <a href="home.php">Home</a>
       <a href="#">About us</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
@@ -54,7 +55,7 @@
     </div>
   </div>
   <div class="trust">
-    <img src="/lst.jpg" alt="">
+    <img src="static/images/down.jpg" alt="">
 
     <p class="benifit">Trust in our todo list to be your reliable companion in your quest for productivity and organization. We are dedicated to providing a seamless, secure, and feature-rich solution that earns your trust and helps you stay focused on what matters most."
     </p>
@@ -89,11 +90,11 @@
           </div>
           <div class="phone">
             <span class="fas fa-phone-alt"></span>
-            <span class="text">+9779849140637</span>
+            <span class="text">+97798********</span>
           </div>
           <div class="email">
             <span class="fas fa-envelope"></span>
-            <span class="text">sital.nawa.8090@gmail.com</span>
+            <span class="text">2dolist@gmail.com</span>
           </div>
         </div>
       </div>
@@ -119,7 +120,7 @@
     </div>
     <div class="bottom">
       <center>
-        <span class="credit">Created By <a href="#">2Do list</a> | </span>
+        <span class="credit">Created By <a href="home.php">2Do list</a> | </span>
         <span class="far fa-copyright"></span><span> 2023 All rights reserved.</span>
       </center>
     </div>

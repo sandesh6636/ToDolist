@@ -75,7 +75,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 <body>
   <div class="header">
     <nav>
-      <div class="logo"><a href="home.html">2Do List</a></div>
+      <div class="logo"><a href="home.php">2Do List</a></div>
 
     </nav>
 
