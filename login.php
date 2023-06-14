@@ -2,7 +2,7 @@
 session_start();
 $msg="";
 if (isset($_SESSION['username'])) {
-    header("location: main.php");
+    header("location: main2.php");
     exit();
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["username"] = $username;
             $_SESSION["id"] = $id;
             $_SESSION["loggedin"] = true;
-            header("location:main.php");
+            header("location:main2.php");
         } else {
           $msg= '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert" >
             <strong>Incorrect password</strong> check your password and try again,
@@ -30,7 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           
         }
     } else {
-        echo "Invalid email";
+      $msg= '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert" >
+            <strong>Invalid email </strong> check your password and try again,
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
     }
 }
 ?>
@@ -59,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h2 class="logo"><a href="home.php">2Do List</a></h2>
     <nav class="navigation">
       <a href="home.php">Home</a>
-      <a href="#">About us</a>
+      <a href="about.php">About us</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
       <button type="submit" class="btn-login">
