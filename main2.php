@@ -4,23 +4,11 @@ $update = false;
 $delete = false;
 
 session_start();
+require_once("conn.php");
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("location: login.php");
     exit;
 }
-
-$userId = $_SESSION["id"];
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "todolist";
-
-$conn = mysqli_connect($servername, $username, $password, $database);
-if (!$conn) {
-    die("Sorry, we failed to connect: " . mysqli_connect_error());
-}
-
 if (isset($_GET['delete'])) {
     $taskId = $_GET['delete'];
     $delete = true;
@@ -34,7 +22,12 @@ if (isset($_GET['delete'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+    
+    
+    
     if (isset($_POST['taskIdEdit'])) {
+        $userId = $_SESSION["id"];
         $taskId = $_POST["taskIdEdit"];
         $taskName = $_POST["taskNameEdit"];
         $taskDescription = $_POST["taskDescriptionEdit"];
@@ -69,15 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<!-- Rest of your HTML code -->
+<!-- Rest of HTML code -->
 
-
-
-<!-- Rest of your HTML code -->
-
-
-
-<!-- Rest of your HTML code -->
 
 <!doctype html>
 <html lang="en">
@@ -91,13 +77,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-
-    <title>iNotes - Notes taking made easy</title>
+<!-- css for the nav -->
+<link rel="stylesheet" href="stacic/css/main2.css">
+    <title> Notes taking made easy</title>
 
 </head>
 
 <body>
-
+   <header>
+        <!-- Header content here -->
+        <h2 class="logo"><a href="home.php">2Do List</a></h2>
+        <nav class="navigation">
+            <a href="home.php">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button type="submit" class="btn-login">
+                <a href="logout.php">Logout</a>
+            </button>
+        </nav>
+    </header>
     <!-- Edit Modal -->
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
         aria-hidden="true">
@@ -255,6 +254,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         });
     });
+
 </script>
 
 </body>

@@ -1,42 +1,50 @@
 <?php
 session_start();
-$msg="";
-if (isset($_SESSION['username'])) {
-    header("location: main2.php");
+require_once("conn.php");
+$msg = "";
+
+if (!isset($_SESSION['username'])) {
+    header("location:crud.php");
     exit();
 }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    require_once("conn.php");
     $email = $_POST['email'];
     $password = $_POST['password'];
     $email_search = "SELECT * FROM login WHERE email='$email'";
     $qry = mysqli_query($conn, $email_search);
     $email_count = mysqli_num_rows($qry);
+
     if ($email_count) {
         $email_pass = mysqli_fetch_assoc($qry);
         $db_pass = $email_pass['password'];
         $pass_decode = password_verify($password, $db_pass);
+
         if ($pass_decode) {
-            echo "Login successful";
+            $username = $email_pass['username'];
+            $id = $email_pass['id'];
+
             $_SESSION["username"] = $username;
             $_SESSION["id"] = $id;
             $_SESSION["loggedin"] = true;
-            header("location:main2.php");
+
+            header("location:crud.php");
+            exit();
         } else {
-          $msg= '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert" >
-            <strong>Incorrect password</strong> check your password and try again,
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>';
-          
+            $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
+                        <strong>Incorrect password</strong> check your password and try again,
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>';
         }
     } else {
-      $msg= '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert" >
-            <strong>Invalid email </strong> check your password and try again,
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>';
+        $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
+                    <strong>Invalid email</strong> check your password and try again,
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
     }
 }
 ?>
+
 
 
 

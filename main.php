@@ -100,23 +100,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php
            echo "$msg";
              ?>
-            </form>
         </div>
     </div>
     <div class="task-list-cointainer">
         <div class="task-list">
             <h3>Important Task 2DO:</h3>
             <div id="important-task-list">
-
+                
+                </div>
             </div>
-        </div>
-        <div class="task-list">
-            <h3>Normal Task 2DO:</h3>
-            <div id="normal-task-list">
-
+            <div class="task-list">
+                <h3>Normal Task 2DO:</h3>
+                <div id="normal-task-list">
+                    
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </form>
 
     <script src="static\js\main.js"></script>
 </body>
