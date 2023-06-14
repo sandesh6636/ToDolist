@@ -15,7 +15,7 @@
     <h2 class="logo"><a href="home.php">2Do List</a></h2>
     <nav class="navigation">
       <a href="home.php">Home</a>
-      <a href="#">About us</a>
+      <a href="">About us</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
       <a href="login.php">Login</a>
