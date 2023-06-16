@@ -29,8 +29,10 @@
   </header>
   <main>
     <div class="main">
-      <h1><strong>
-          Rise Above Procrastination,</strong> <br> Embrace Discipline, and Unleash Your True Potential with our Revolutionary Todo List</h1>
+      <h1>
+      <p class="multipleStrings"></p>
+      <strong>
+        </strong> <br></h1>
 
       <p class="down-main-text">Stay Organized, Stay Ahead .
         Fuel Your Success with Productivity</p>
@@ -125,6 +127,15 @@
       </center>
     </div>
   </footer>
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script>
+
+    new TypeIt(".multipleStrings", {
+      strings: ["  Rise Above Procrastination,", " Embrace Discipline, and Unleash Your True Potential with our Revolutionary Todo List"],
+      speed: 30,
+      waitUntilVisible: true,
+    }).go();
+    </script>
 </body>
 
 </html>

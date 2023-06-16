@@ -3,10 +3,10 @@ session_start();
 require_once("conn.php");
 $msg = "";
 
-if (!isset($_SESSION['username'])) {
-    header("location:crud.php");
-    exit();
-}
+// if (!isset($_SESSION['username'])) {
+//     header("location:crud.php");
+//     exit();
+// }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -79,8 +79,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </nav>
   </header>
   <div class="welcom-section">
+ <p id="simpleUsage"><strong>Welcome to the 2Do List!</strong> </p>your ultimate online task management solution! We are thrilled to have you here,stayorganized and accomplish your goals.
 
-    <p><strong>Welcome to the 2Do List!</strong> your ultimate online task management solution! We are thrilled to have you here,stayorganized and accomplish your goals.</p>
     <div class="register-link">
       <p>Not registered? <a href="register.php">Register here</a></p>
 
@@ -111,6 +111,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       ?>
     </form>
   </div>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script>
+
+    new TypeIt("#simpleUsage", {
+      strings: "",
+      speed: 50,
+      waitUntilVisible: true,
+    }).go();
+    </script>
 </body>
 
 </html>

@@ -178,8 +178,8 @@
       max-width: 100%;
     }
 
-    .image-caption {
-      font-size: 1.5rem;
+   #simpleUsage {
+      font-size: 1.9rem;
       color:var(--darkest-color);
       font-family: 'Montserrat', sans-serif;
       font-weight:bold;

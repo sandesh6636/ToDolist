@@ -79,11 +79,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     </nav>
 
-    <p class="fact">Did you know that maintaining a to-do list can help improve productivity and reduce stress? It's a great way to stay organized and prioritize tasks!</p>
+   
+    <p class="fact"> 
+    <strong>Did you know? </strong> that maintaining a to-do list can help improve productivity and reduce stress! It's a great way to stay organized and prioritize tasks!</p>
     <div class="image">
       <div class="org-img">
         <img src="static\images\org.jpg" alt="" class="organized-image">
-        <p class="image-caption">Organize Your Work</p>
+      <p id="simpleUsage"></p>
       </div>
 
     </div>
@@ -121,7 +123,16 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     </form>
     <p>Already have an account? <a href="login.php">Login here</a></p>
   </div>
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  
+  <script>
 
+    new TypeIt("#simpleUsage", {
+      strings: "Organize Your Work",
+      speed: 50,
+      waitUntilVisible: true,
+    }).go();
+    </script>
 
 
 </body>

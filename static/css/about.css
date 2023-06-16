@@ -122,9 +122,10 @@ body{
   justify-content: space-around;
 }
 
-.about .text h1 {
+.about .text #simpleUsage {
          font-family: 'Montserrat', sans-serif; 
-  font-size: 50px;
+  font-size: 40px;
+  color: var(--dark-color);
   text-transform: capitalize;
   margin-bottom: 20px;
 }

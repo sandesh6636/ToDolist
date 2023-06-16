@@ -28,7 +28,7 @@
   <div class="main">
     <img src="static/images/about.jpg" alt="">
     <div class="text">
-      <h1>About Us</h1>
+      <h1 id="simpleUsage"></h1>
       <h5><a href="home.php"><span>2Do</span>-list</a></h5>
             <p>Welcome to ToDoList, your go-to application for managing your tasks and getting things done!
             Our mission is to provide a simple and intuitive to-do list application that helps you stay organized and increase productivity.</p>
@@ -100,12 +100,18 @@
     </p>
     
   </div>
-</section>
+</section> 
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 <script>
   function showFullContent(){
     document.getElementById('fullContent').style.display="block";
     
   }
+  new TypeIt("#simpleUsage", {
+  strings: "About Us",
+  speed: 50,
+  waitUntilVisible: true,
+}).go();
 </script>
 </body>
 
