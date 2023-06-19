@@ -256,10 +256,15 @@ footer {
   background-color: #2d2a30;
   box-sizing: border-box;
   width: 100%;
+<<<<<<< HEAD
   text-align: left;
   font: bold 16px sans-serif;
   padding: 50px 50px 60px 50px;
   margin-top: 80px;
+=======
+  background-color:#0f0f0f;;
+  flex-shrink: 0;
+>>>>>>> dfa1cac0d44a8f6c9567949dbe664ec65147d7e5
 }
 
 .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {

@@ -43,8 +43,12 @@
         <li>Create and manage multiple to-do lists: Stay organized by creating separate to-do lists for work, personal tasks, or any other category you need.</li>
         <li>Add tasks with due dates and priorities: Set due dates and prioritize your tasks to ensure timely completion and effective task management.</li>
         <li>Mark tasks as complete and track your progress: Easily track completed tasks to stay motivated and monitor your productivity over time.</li>
-        <li>Set reminders and receive notifications: Never miss an important task or deadline with customizable reminders and notifications.</li>
-        <li>Collaborate and share lists with others: Work together with colleagues, friends, or family members by sharing your to-do lists and collaborating in real-time.</li>
+        <li>Users have the ability to update task details, such as modifying descriptions, due dates, and priority levels.
+Any changes made to a task are reflected in real-time within the 2do list.
+.</li>
+        <li>Users can delete tasks that are no longer relevant or needed.
+Upon deletion, the task is removed from the user's 2do list.
+</li>
       </ul>
   </div>
   <div class="team-section">
