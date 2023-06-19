@@ -7,6 +7,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login Page</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="static\css\home.css">
 </head>
 
@@ -61,72 +63,61 @@
 
     <p class="benifit">Trust in our todo list to be your reliable companion in your quest for productivity and organization. We are dedicated to providing a seamless, secure, and feature-rich solution that earns your trust and helps you stay focused on what matters most."
     </p>
-    <button type="submit" class="btn-login">
+    <button type="submit" class="btn-login ">
       <a href="register.php">
         Create Account
       </a>
     </button>
   </div>
 
-  <footer>
-    <div class="main-content">
-      <div class="left box">
-        <h2>About us</h2>
-        <div class="content">
-          <p>2Do List is a powerful task management tool designed to help individuals streamline their daily tasks, prioritize their goals, and achieve maximum efficiency. Whether you are a student, professional, or busy individual, our platform offers a range of features and customizable options tailored to meet your unique needs.</p>
-          <div class="social">
-            <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
-            <a href="#"><span class="fab fa-twitter"></span></a>
-            <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
-            <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
-          </div>
-        </div>
-      </div>
+  <footer class="footer-distributed">
 
-      <div class="center box">
-        <h2>Address</h2>
-        <div class="content">
-          <div class="place">
-            <span class="fas fa-map-marker-alt"></span>
-            <span class="text">Kathmandu,Nepal</span>
-          </div>
-          <div class="phone">
-            <span class="fas fa-phone-alt"></span>
-            <span class="text">+97798********</span>
-          </div>
-          <div class="email">
-            <span class="fas fa-envelope"></span>
-            <span class="text">2dolist@gmail.com</span>
-          </div>
-        </div>
-      </div>
+        <div class="footer-left">
+            <h3>2Dolist<span> Task manager</span></h3>
 
-      <div class="right box">
-        <h2>Contact us</h2>
-        <div class="content">
-          <form action="#">
-            <div class="email">
-              <div class="text">Email *</div>
-              <input type="email" required>
-            </div>
-            <div class="msg">
-              <div class="text">Message *</div>
-              <textarea rows="2" cols="25" required></textarea>
-            </div>
-            <div class="btn">
-              <button type="submit">Send</button>
-            </div>
-          </form>
+            <p class="footer-links">
+                <a href="home.php">Home</a>
+                |
+                <a href="about.php">About</a>
+                |
+                <a href="contact.php">Contact</a>
+                |
+               
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>2Dolist</strong> All rights reserved</p>
         </div>
-      </div>
-    </div>
-    <div class="bottom">
-      <center>
-        <span class="credit">Created By <a href="home.php">2Do list</a> | </span>
-        <span class="far fa-copyright"></span><span> 2023 All rights reserved.</span>
-      </center>
-    </div>
-  </footer>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Kathamandu</span>
+                    Nepal</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+977 9849140637</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:2dolist99@gmal.com">2Dolist99@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>2Dolist</strong> is a powerful task management tool designed to help individuals streamline their daily tasks, prioritize their goals, and achieve maximum efficiency. Whether you are a student, professional, or busy individual, our platform offers a range of features and customizable options tailored to meet your unique needs.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
   <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   <script>
 
