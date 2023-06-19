@@ -245,7 +245,7 @@ color:var(--lightest-color);
   margin-top:30px;
   bottom: 0px;
   width: 100%;
-  background:var(--dark-color);
+  background-color:#0f0f0f;;
   flex-shrink: 0;
 }
 .main-content{
