@@ -1,0 +1,214 @@
+
+    :root {
+  --dark-color: #00203FFF;
+  --darker-color: #084C61FF;
+  --darkest-color: #07689F;
+  --light-color: #B5D9EB;
+  --lighter-color: #CEE6F2;
+  --lightest-color: #FEFFFF;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 200px;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  padding: 20px 30px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  background-color: var(--lightest-color);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.navigation a {
+  position: relative;
+  color: var(--dark-color);
+  margin-left: 40px;
+  font-family: 'Geologica', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navigation .btn-login {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid var(--dark-color);
+  background-color: var(--dark-color);
+  border-radius: 7px;
+  color: var(--lightest-color);
+  margin-left: 40px;
+  transition: .5s;
+}
+.navigation .btn-login a{
+margin:0;
+color:var(--lightest-color);
+}
+.navigation .btn-login:hover {
+background-color: var(--lightest-color);
+color: var(--dark-color);
+}
+.navigation .btn-login a:hover {
+/* background-color: var(--lightest-color); */
+color: var(--dark-color);
+}
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: var(--darker-color);
+  border-radius: 5px;
+  left: 0;
+  bottom: -6px;
+  transform: scaleX(0);
+  transition: transform .4s;
+  transform-origin: right;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+/* Add this CSS to style the table input */
+.user-pic{
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left :30px;;
+
+}
+table {
+    text-transform: capitalize;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+    text-transform: capitalize;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+form {
+    margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+/* Add this CSS to style the Edit and Delete buttons */
+
+table {
+    margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.actions a {
+    text-transform: capitalize;
+    letter-spacing:1px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.edit {
+  background-color: #4caf50;
+}
+
+.delete {
+  background-color: #f44336;
+}
+
+.actions a:hover {
+  opacity: 0.8;
+}
+
+#simpleUsage{
+    text-transform: capitalize;
+    letter-spacing:1px;
+}
+h1,h2{
+    text-transform: capitalize;
+    letter-spacing:2px;
+}
+h2{
+    border: 2px solid transparent;
+    border-radius:30px;
+}
