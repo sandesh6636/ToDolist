@@ -69,13 +69,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <header>
     <h2 class="logo"><a href="home.php">2Do List</a></h2>
     <nav class="navigation">
-      <a href="home.php">Home</a>
-      <a href="about.php">About us</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-      <button type="submit" class="btn-login">
-        Login
-      </button>
+      <!-- <a href="home.php">Home</a>
+      <a href="about.php">About us</a> -->
+      <!-- <a href="#">Services</a>
+      <a href="#">Contact</a> -->
+
+        <!-- <button type="submit" name="submit" class="btn-login">
+          Login
+        </button>
+       -->
+        
     </nav>
   </header>
   <div class="welcom-section">
