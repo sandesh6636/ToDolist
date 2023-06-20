@@ -48,7 +48,7 @@ Any changes made to a task are reflected in real-time within the 2do list.
 .</li>
         <li>Users can delete tasks that are no longer relevant or needed.
 Upon deletion, the task is removed from the user's 2do list.
-</li>
+ </li>
       </ul>
   </div>
   <div class="team-section">

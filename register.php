@@ -128,7 +128,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
       <button type="submit">Register</button>
       <?php 
        echo $msg; 
-      
+       
       ?>
     </form>
     <p>Already have an account? <a href="login.php">Login here</a></p>
