@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* #myChart{
+        display: block;
+    box-sizing: border-box;
+    height: 685px;
+    width: 685px;
+    } */
+</style>
+<body>
+    <div>
+        <canvas id="myChart" style="display: block;box-sizing: border-box;height: 335px;width: 335px;" width="335" height="335"></canvas>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+      labels: ['Normal Task Added','Important Task Added '],
+      datasets: [{
+        label: 'Type of task Added by the user',
+        data: [10,13],
+        borderWidth: 1,
+      
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+ 
+</body>
+</html>
