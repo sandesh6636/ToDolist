@@ -1,17 +1,16 @@
 <?php
 session_start();
 require_once("conn.php");
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+require 'vendor/autoload.php';
 $msg = "";
-
-// if (!isset($_SESSION['username'])) {
-//     header("location:crud.php");
-//     exit();
-// }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $email_search = "SELECT * FROM login WHERE email='$email'";
+    $email_search = "SELECT * FROM users WHERE email='$email'";
     $qry = mysqli_query($conn, $email_search);
     $email_count = mysqli_num_rows($qry);
 
@@ -21,31 +20,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pass_decode = password_verify($password, $db_pass);
 
         if ($pass_decode) {
-            $username = $email_pass['username'];
+            $username = $email_pass['name'];
             $id = $email_pass['id'];
+            $email_verified_at = $email_pass['email_verified_at'];
 
-            $_SESSION["username"] = $username;
-            $_SESSION["id"] = $id;
-            $_SESSION["loggedin"] = true;
+            if ($email_verified_at != null) {
+                $_SESSION["username"] = $username;
+                $_SESSION["id"] = $id;
+                $_SESSION["loggedin"] = true;
 
-            header("location:crud.php");
-            exit();
+                header("location: crud.php");
+                exit();
+            } else {
+                $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
+                            <strong>Email not verified! Please verify your email first.</strong>
+                            <a href="resend-verification.php" class="alert-link">Resend verification code</a>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>';
+            }
         } else {
             $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
-                        <strong>Incorrect password</strong> check your password and try again,
+                        <strong>Incorrect password.</strong> Check your password and try again.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>';
         }
     } else {
         $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
-                    <strong>Invalid email</strong> check your password and try again,
+                    <strong>Invalid email.</strong> Check your email and try again.
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
     }
 }
+
+$email_verified_at = isset($email_verified_at) ? $email_verified_at : null;
+$email = isset($email) ? $email : "";
+
 ?>
-
-
 
 
 
@@ -91,29 +101,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form action="" method="POST">
       <div class="input-box">
         <span class="email">
-        </span>
-        <input type="email" name="email" id="email" placeholder="Email" required>
-        <label>Email</label>
-      </div>
-      <div class="input-box">
-        <span class="icon"></span>
-        <input type="password" name="password" id="password" placeholder="Password" required>
-        <label>Password</label>
-      </div>
-      <button type="submit">Submit</button>
-      <div class="reset-link">
-        <p>Forgot password? <a href="/forgotPassword.html">Reset here </a>
+          </span>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"></span>
+          <input type="password" name="password" id="password" placeholder="Password" required>
+          <label>Password</label>
+        </div>
+        <button type="submit">Submit</button>
+        <div class="reset-link">
+          <p>Forgot password? <a href="/forgotPassword.html">Reset here </a>
         </p>
-
+        
       </div>
+      <?php echo $msg; ?>
+    
       <?php
-      echo $msg;
+      // echo $msg;
       ?>
     </form>
   </div>
-    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   <script>
-
+    
     new TypeIt("#simpleUsage", {
       strings: "",
       speed: 50,

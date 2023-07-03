@@ -34,7 +34,7 @@
             $mail->Username = '2dolist99@gmail.com';
  
             //SMTP password
-            $mail->Password = 'mynameissandeshrai100';
+            $mail->Password = 'xdqwmtaudsmuvnga';
  
             //Enable TLS encryption;
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;

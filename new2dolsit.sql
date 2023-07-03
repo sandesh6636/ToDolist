@@ -16,32 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `login`
---
-
-DROP TABLE IF EXISTS `login`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `login` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(20) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `password` varchar(90) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `login`
---
-
-LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'sandesh rai','sandesh@gmail.com','$2y$10$1/.nNul3RmWqYRogvWEkC.xpVHGY45eNGNSy0ekk.4Lf.lrSyCsZ.'),(2,'sandesh rai','sandesh@gmail.com','$2y$10$O0jArEkekFO4K3BWREo1UeNp7gE383Cu8FqhUEuQtL20Ci6k5YR0e'),(3,'sandesh rai','sandesh@gmail.com','$2y$10$hbPY/HFv2a6BnjK11LGq1uDUnO5MX0gZEg3CfVfCj7BNlb9rgO00q'),(4,'sandesh rai','sandesh@gmail.com','$2y$10$toOGpYyb7LxUAicRpFB8XuZKsQ05vP693jSFfpRv9u535yAx4MLrm'),(5,'training_morning','','$2y$10$HzVKCprf77TuKTVTPg9KaefZ/U4sYFMk88KxkBfU/yv9O5rhpdZ6G'),(6,'kabin raj','k@gmail.com','$2y$10$/tUncE2IoUS/Jgdecgne/Os5b4o8L1qvUcdX1fMARUS/zX28P5hbq'),(7,'prabin','prabin@ggmail.com','$2y$10$pLchi1GpDmg9izsSP/uCTuUTMXmN6CWX/OwXQ/xRJ/HrJDAlGgkQm'),(8,'kabin dad','kabinD@gmail.com','$2y$10$sNYw3Zg2PrDVKGmJIfxDcOvpe1fX5E037zGNmu/1kIhtctutPAyTC'),(9,'hh','h@gmail.com','$2y$10$k33DhbVG9Nqaf.xV.z/fS.nZOz18V5XHr8JqsWRSktd.xHJY3CKDW'),(10,'MIilan','Milan@gmail.com','$2y$10$8Kh00fbkldQH/Yfy.6zxpOeD8i1edXDdfsB6CR7LFhKwTuLWAYRaq'),(11,'ka bin','ka@gmail.com','$2y$10$Xs5BwD48qe/drbot5PevNuAROCD02D4UlBIaGR9IW8vuCA6N6C42m'),(12,'Pra','pra@gmail.com','$2y$10$XOIz6Y5nu3Srd9XfyUrUVOc9nLWMYzb/FdFS1RB2IpF4ixac5GrPW'),(13,'KLR','KLR@gmail.com','$2y$10$Y9ToAcUHtCJxVvumwsEnUOjB6Oa4M/VNAWghAD2lupFAOHgQ1rfz6'),(14,'KN xtha','KN@gmail.com','$2y$10$nh5DKEhzxrwUYDGXMBbA7Oy4ZFtCfBHBrQw4AJZWZ5GXxZ0jgR8Ta');
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tasks`
 --
 
@@ -69,6 +43,34 @@ LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL,
+  `verification_code` text NOT NULL,
+  `email_verified_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (5,'umesh rai','notopup2009@gmail.com','$2y$10$6b.m3JpfrlbKiF3vz572B.kR.eevC7WgUqjj5DTXKZBHxy/3AnhcO','138462','2023-06-30 10:25:13'),(8,'sandesh rai','sital.nawa.8090@gmal.com','$2y$10$8Y0vb9K.Ly0p5mxZojYaFezHpB2bbVPCVlwLDOQPe3sGnPi0/wt1q','259812','2023-07-03 07:50:13');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -79,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-12  7:50:59
+-- Dump completed on 2023-07-03  9:18:37
