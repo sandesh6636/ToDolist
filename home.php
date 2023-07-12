@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login Page</title>
   <link rel="stylesheet" href="static\css\home.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,8 +17,7 @@
     <nav class="navigation">
       <a href="home.php">Home</a>
       <a href="about.php">About us</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
+      <a href="contactus.php">Contact</a>
       <a href="login.php">Login</a>
       <button type="submit" class="btn-login">
         <a href="register.php">
@@ -68,65 +68,99 @@
     </button>
   </div>
 
-  <footer>
-    <div class="main-content">
-      <div class="left box">
-        <h2>About us</h2>
-        <div class="content">
-          <p>2Do List is a powerful task management tool designed to help individuals streamline their daily tasks, prioritize their goals, and achieve maximum efficiency. Whether you are a student, professional, or busy individual, our platform offers a range of features and customizable options tailored to meet your unique needs.</p>
-          <div class="social">
-            <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
-            <a href="#"><span class="fab fa-twitter"></span></a>
-            <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
-            <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="center box">
-        <h2>Address</h2>
-        <div class="content">
-          <div class="place">
-            <span class="fas fa-map-marker-alt"></span>
-            <span class="text">Kathmandu,Nepal</span>
-          </div>
-          <div class="phone">
-            <span class="fas fa-phone-alt"></span>
-            <span class="text">+97798********</span>
-          </div>
-          <div class="email">
-            <span class="fas fa-envelope"></span>
-            <span class="text">2dolist@gmail.com</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="right box">
-        <h2>Contact us</h2>
-        <div class="content">
-          <form action="#">
-            <div class="email">
-              <div class="text">Email *</div>
-              <input type="email" required>
-            </div>
-            <div class="msg">
-              <div class="text">Message *</div>
-              <textarea rows="2" cols="25" required></textarea>
-            </div>
-            <div class="btn">
-              <button type="submit">Send</button>
-            </div>
-          </form>
-        </div>
-      </div>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1; padding-top: 20px;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
+    <!-- Left -->
+    <div class="me-5">
+      <span>Get connected with us on social networks:</span>
     </div>
-    <div class="bottom">
-      <center>
-        <span class="credit">Created By <a href="home.php">2Do list</a> | </span>
-        <span class="far fa-copyright"></span><span> 2023 All rights reserved.</span>
-      </center>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="text-white me-4">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
-  </footer>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container-fluid text-center text-md-start mt-4">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold">2do-List</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+          <p>
+          Are you looking for a seamless and efficient way to manage your tasks and stay organized? Look no further! We are thrilled to present our cutting-edge to-do list app designed to transform the way you approach productivity and task management.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold">Useful links</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+          <p><a href="login.php" class="text-dark">Login</a></p>
+          <p><a href="register.php" class="text-dark">Register</a></p>
+          <p><a href="contact.php" class="text-dark">Contact</a></p>
+       
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+          <p><i class="fas fa-home mr-3"></i>Kathamandu , Nepal</p>
+          <p><i class="fas fa-envelope mr-3"></i> <a href="mailto:2dolist99@gmail.com">2dolist99@gmail.com"</a></p>
+          <p><i class="fas fa-phone mr-3"></i><a href="tel:+9779849140637">+9779849140637</a></p>
+          
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2023 2do-list.com
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
   <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   <script>
 

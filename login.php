@@ -81,8 +81,8 @@ $email = isset($email) ? $email : "";
     <nav class="navigation">
       <a href="home.php">Home</a>
       <a href="about.php">About us</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
+      
+      <a href="contactus.php">Contact</a>
       <button type="submit" class="btn-login">
         Login
       </button>

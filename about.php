@@ -13,8 +13,7 @@
       <nav class="navigation">
         <a href="home.php">Home</a>
         <a href="#">About us</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="contactus.php">Contact</a>
         <a href="login.php">Login</a>
         <button type="submit" class="btn-login">
           <a href="register.php">
@@ -27,13 +26,20 @@
 <section class="about" id="halfContent">
   <div class="main">
     <img src="static/images/about.jpg" alt="">
-    <div class="text">
+    <div class="text r">
       <h1 id="simpleUsage"></h1>
       <h5><a href="home.php"><span>2Do</span>-list</a></h5>
             <p>Welcome to ToDoList, your go-to application for managing your tasks and getting things done!
             Our mission is to provide a simple and intuitive to-do list application that helps you stay organized and increase productivity.</p>
-            <button type="button" onclick="showFullContent()">Read more</button>
-    </div>
+           
+            <div class="container">
+            <div class="btn"><a href="#"  onclick="showFullContent()">Read more </a></div>
+            </div>
+		
+			
+
+	</div>		
+    
   </div>
 </section>
 <section class="about" id="fullContent" style="display:none";>
@@ -56,6 +62,7 @@
       <h3>Sandesh Rai</h3>
       <p>Sandesh is the leader of our team. He contributed to the login page, home page, and to-do list functionality.</p>
       <button type="button"><a href="https://www.facebook.com/profile.php?id=100031102463841">Let's Talk</a></button>
+      
     </div>
   </div>
   <div class="team-member">

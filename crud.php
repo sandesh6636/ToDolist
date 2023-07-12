@@ -286,10 +286,7 @@ h2{
         <!-- Header content here -->
         <h2 class="logo"><a href="home.php">2Do List</a></h2>
         <nav class="navigation">
-            <a href="home.php">Home</a>
-            <a href="#">About us</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            
             <button type="submit" class="btn-login">
                 <a href="logout.php">Logout</a>
             </button>
