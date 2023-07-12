@@ -32,11 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("location: crud.php");
                 exit();
             } else {
-                $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
-                            <strong>Email not verified! Please verify your email first.</strong>
-                            <a href="resend-verification.php" class="alert-link">Resend verification code</a>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>';
+                $msg = '<div class="alert alert-danger" role="alert">
+                Verify you Email first  <a href="email-verification.php" class="alert-link">verify your email</a>.
+              </div>';
             }
         } else {
             $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
@@ -83,9 +81,8 @@ $email = isset($email) ? $email : "";
       <a href="about.php">About us</a>
       
       <a href="contactus.php">Contact</a>
-      <button type="submit" class="btn-login">
-        Login
-      </button>
+      <a href="register.php" id="register-btn">Register</a>
+      
     </nav>
   </header>
   <div class="welcom-section">

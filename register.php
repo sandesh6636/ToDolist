@@ -43,8 +43,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
              </div>';
     } else {
-      if ($password != $cpassword) {
-        echo "password and confirm password not matched";
+      if(strlen($password) < 6){
+        $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
+        <strong>Password must be Atlest 6 character</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
+      }
+      else if ($password != $cpassword) {
+       $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
+                 <strong>password and confirm password not matchedt</strong> 
+                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+             </div>';
       } else {
         $verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
 
@@ -141,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </p>
     <div class="image">
       <div class="org-img">
-        <img src="static/images/org.jpg" alt="" class="organized-image">
+        <img src="static/images/registerM.jpg" alt="" class="organized-image">
         <p id="simpleUsage"></p>
       </div>
     </div>
@@ -149,6 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="wrapper">
     <h3>Register here: </h3>
     <form action="" method="POST">
+      <?php echo $msg; ?>
       <div class="input-box">
         <span class="icon"></span>
         <input type="text" name="name" id="username" placeholder="Username" required>
@@ -170,7 +180,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label>Confirm Password</label>
       </div>
       <button type="submit">Register</button>
-      <?php echo $msg; ?>
     </form>
     <p>Already have an account? <a href="login.php">Login here</a></p>
   </div>

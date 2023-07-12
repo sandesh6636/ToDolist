@@ -39,7 +39,11 @@ header {
   background-color:var(--lightest-color);
   
 }
-
+#register-btn{
+  border:2px solid var(--dark-color) ;
+  padding: 10px;
+  border-radius: 23px;
+}
 .logo {
   font-size: 2rem;
 

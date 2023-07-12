@@ -70,9 +70,10 @@
       justify-content: center;
       align-items: center;
       width: 600px;
-      height: 470px;
+      height: 545px;
       padding: 50px;
       margin-right: 20px;
+     
       border-radius:30px 20px 30px 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
