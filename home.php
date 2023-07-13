@@ -69,9 +69,9 @@
   </div>
 
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1; padding-top: 20px;">
+<footer class="text-center text-lg-start text-dark" style="padding-top: 74px;">
   <!-- Section: Social media -->
-  <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
+  <section class="d-flex justify-content-between p-4 text-white" style="background-color: #299f9f;">
     <!-- Left -->
     <div class="me-5">
       <span>Get connected with us on social networks:</span>

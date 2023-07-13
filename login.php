@@ -5,7 +5,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
-$msg = "";
+
+$Emsg = $msg =$Vmsg="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -25,28 +26,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email_verified_at = $email_pass['email_verified_at'];
 
             if ($email_verified_at != null) {
-                $_SESSION["username"] = $username;
+                $_SESSION["username"] = $name;
                 $_SESSION["id"] = $id;
                 $_SESSION["loggedin"] = true;
 
                 header("location: crud.php");
                 exit();
             } else {
-                $msg = '<div class="alert alert-danger" role="alert">
+                $Vmsg = '<div class="alert alert-danger" role="alert">
                 Verify you Email first  <a href="email-verification.php" class="alert-link">verify your email</a>.
               </div>';
             }
         } else {
-            $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
-                        <strong>Incorrect password.</strong> Check your password and try again.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>';
+            $msg = '<div class="alert alert-danger" role="alert" style="border: none; color: red;  background-color: transparent;">
+            Incorrect password.
+          </div>
+          ';
         }
     } else {
-        $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
-                    <strong>Invalid email.</strong> Check your email and try again.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>';
+        $Emsg = '<div class="alert alert-danger" role="alert" style="border: none; color: red;  background-color: transparent;">
+        Invalid email.
+      </div>
+      ';
     }
 }
 
@@ -90,7 +91,7 @@ $email = isset($email) ? $email : "";
 
     <div class="register-link">
       <p>Not registered? <a href="register.php">Register here</a></p>
-
+      
     </div>
   </div>
   <div class="wrapper">
@@ -100,20 +101,23 @@ $email = isset($email) ? $email : "";
         <span class="email">
           </span>
           <input type="email" name="email" id="email" placeholder="Email" required>
+          <?php echo $Emsg; ?>
           <label>Email</label>
         </div>
         <div class="input-box">
           <span class="icon"></span>
           <input type="password" name="password" id="password" placeholder="Password" required>
+          <?php echo $msg; ?>
+
           <label>Password</label>
         </div>
         <button type="submit">Submit</button>
         <div class="reset-link">
-          <p>Forgot password? <a href="/forgotPassword.html">Reset here </a>
+          <p>Forgot password? <a href="reset.php">Reset here </a>
         </p>
-        
+        <?php echo $Vmsg; ?>
+
       </div>
-      <?php echo $msg; ?>
     
       <?php
       // echo $msg;
