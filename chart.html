@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    /* #myChart{
+      display: block;
+      box-sizing: border-box;
+      height: 685px;
+      width: 685px;
+    } */
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100;300&family=Rubik+Pixels&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@600&family=Montserrat:wght@100&family=Roboto:wght@100;300&family=Rubik+Pixels&display=swap');
+:root{
+  
+      --dark-color: #00203FFF;
+      --darker-color: #084C61FF;
+      --darkest-color: #07689F;
+      --light-color: #B5D9EB;
+      --lighter-color: #CEE6F2;
+      --lightest-color: #FEFFFF;
+    
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
+      height:100%;
+      padding-top: 80px;
+      /* min-height:100vh;/ */
+
+    }
+    .chart{
+  padding: 2rem;
+  border:1px solid #f49131;
+ border-radius: 1rem; 
+ background: #251c35;
+ box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+}
+</style>
+<body>
+    <div class="chart">
+        <canvas id="myChart" height="300px" width="300px"></canvas>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+      labels: ['Normal Task Added','Important Task Added '],
+      datasets: [{
+        label: 'Type of task Added by the user',
+        data: [10,13],
+        borderWidth: 1,
+      
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+ 
+</body>
+</html>
