@@ -6,6 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About us</title>
   <link rel="stylesheet" href="static\css\about.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style type="text/css">
+        body {
+            font-family: 'Alata', sans-serif;
+            font-weight: 400;
+        }
+        </style>
+  
+    
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
@@ -25,7 +37,7 @@
       </nav>
     </header>
 <section class="about" id="halfContent">
-  <div class="main">
+  <div class="main" data-aos="fade-in">
     <img src="static/images/about.jpg" alt="">
     <div class="text r">
       <h1 id="simpleUsage"></h1>
@@ -44,7 +56,7 @@
   </div>
 </section>
 <section class="about" id="fullContent" style="display:none";>
-  <div class="key-features">
+  <div class="key-features" data-aos="flip-left">
       <h2>Key Features</h2>
       <ul>
         <li>Create and manage multiple to-do lists: Stay organized by creating separate to-do lists for work, personal tasks, or any other category you need.</li>
@@ -54,10 +66,10 @@
         <li>Collaborate and share lists with others: Work together with colleagues, friends, or family members by sharing your to-do lists and collaborating in real-time.</li>
       </ul>
   </div>
-  <div class="team-section">
+  <div class="team-section" data-aos="fade-in">
     
   <h2>Meet the Team</h2>
-  <div class="team-member">
+  <div class="team-member" data-aos="fade-right">
     <img src="static/images/sandesh.jpg" alt="Sandesh Rai">
     <div>
       <h3>Sandesh Rai</h3>
@@ -110,7 +122,7 @@
   </div>
 </section> 
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1; padding-top: 20px;">
+<footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1; padding-top: 59px;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
     <!-- Left -->
@@ -213,6 +225,17 @@
   waitUntilVisible: true,
 }).go();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <!-- our aos data -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+        });
+        </script>
+
 </body>
 
 </html>

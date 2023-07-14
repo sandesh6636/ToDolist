@@ -8,6 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login Page</title>
   <link rel="stylesheet" href="static\css\home.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style type="text/css">
+        body {
+            font-family: 'Alata', sans-serif;
+            font-weight: 400;
+        }
+        </style>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
@@ -43,20 +53,20 @@
       </button>
     </div>
   </main>
-  <div class="second-section">
+  <div class="second-section" data-aos="fade-left">
     <div class="img-1">
       <img src="static/images/up.jpg" alt="">
     </div>
     <p class="benifit"><strong>Organization and Time Management: </strong><br>A to-do list helps you stay organized by providing a clear overview of tasks and priorities. It helps you manage your time effectively and ensures that important tasks are not overlooked or forgotten.</p>
   </div>
 
-  <div class="second-section">
+  <div class="second-section" data-aos="fade-right">
     <p class="benifit"><strong>Stress Reduction:</strong><br> Keeping track of tasks and having a plan in place reduces stress and anxiety. With a to-do list, you can have peace of mind, knowing that you have a clear roadmap to follow and that important tasks are accounted for.</p>
     <div class="img-2">
       <img src="static/images/newimg.png" alt="">
     </div>
   </div>
-  <div class="trust">
+  <div class="trust" data-aos="fade-left">
     <img src="static/images/down.jpg" alt="">
 
     <p class="benifit">Trust in our todo list to be your reliable companion in your quest for productivity and organization. We are dedicated to providing a seamless, secure, and feature-rich solution that earns your trust and helps you stay focused on what matters most."
@@ -119,9 +129,6 @@
         </div>
         <!-- Grid column -->
 
-        <!-- Grid column -->
-        
-        <!-- Grid column -->
 
         <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -170,6 +177,16 @@
       waitUntilVisible: true,
     }).go();
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <!-- our aos data -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+        });
+        </script>
 </body>
 
 </html>

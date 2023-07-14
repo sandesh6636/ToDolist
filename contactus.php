@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->Body = "<p><strong>Name:</strong> $name</p><p><strong>Email:</strong> $email</p><p><strong>Message:</strong> $message</p>";
 
     $mail->send();
-    $msg = '<div class="alert alert-danger alert-dismissible fade show font-weight-bold" role="alert">
+    $msg = '<div class="alert alert-success alert-dismissible fade show font-weight-bold" role="alert">
     <strong>Email sent successfully!</strong>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>';
@@ -74,6 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="static/css/contact.css">
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -125,9 +126,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <textarea name="message" placeholder="Enter your message"></textarea>
             </div>
             <div class="button">
-              <input type="submit" value="Send Now">
+              <button type="submit" class="btn btn-outline-success">Send</button>
             </div>
-
             <?php
             echo $msg;
             ?>
@@ -135,6 +135,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
       </div>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
