@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
             // Set email content
-            $resetLink = "http://localhost:5000/2dolist/todolist/reset_password_confirm.php?token=$token";
+            $resetLink = "http://localhost:8000/todolist/reset_password_confirm.php?token=$token";
             $mail->Body = "Click the following link to reset your password: $resetLink";
             $mail->send();
 

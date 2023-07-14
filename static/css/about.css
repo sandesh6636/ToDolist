@@ -130,6 +130,7 @@ body{
   color: var(--dark-color);
   text-transform: capitalize;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .about .text h5 {
@@ -138,6 +139,7 @@ body{
   text-transform: capitalize;
   margin-bottom: 20px;
   letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .about .text a {
@@ -269,6 +271,7 @@ none;
   letter-spacing:2px;
   font-size: 24px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .team-member p {

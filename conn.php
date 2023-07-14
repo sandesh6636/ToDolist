@@ -5,7 +5,7 @@
 // $password="";
 // $database="todolist";
 define('host',"localhost");
-define('port',"3300");
+define('port',"3307");
 define('username',"root");
 define('password',"");
 define('database',"todolist");

@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
-$Emsg = $msg =$Vmsg="";
+$msg =$Vmsg="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           ';
         }
     } else {
-        $Emsg = '<div class="alert alert-danger" role="alert" style="border: none; color: red;  background-color: transparent;">
+        $msg = '<div class="alert alert-danger" role="alert" style="border: none; color: red;  background-color: transparent;">
         Invalid email.
       </div>
       ';
@@ -106,18 +106,19 @@ $email = isset($email) ? $email : "";
   </div>
   <div class="wrapper">
     <h3>Login:</h3>
+    <?php echo $msg; ?>
+
     <form action="" method="POST">
       <div class="input-box">
         <span class="email">
           </span>
           <input type="email" name="email" id="email" placeholder="Email" required>
-          <?php echo $Emsg; ?>
           <label>Email</label>
         </div>
         <div class="input-box">
           <span class="icon"></span>
           <input type="password" name="password" id="password" placeholder="Password" required>
-          <?php echo $msg; ?>
+          
 
           <label>Password</label>
         </div>

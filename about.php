@@ -54,9 +54,9 @@
 	</div>		
     
   </div>
-</section>
-<section class="about" id="fullContent" style="display:none";>
-  <div class="key-features" data-aos="flip-left">
+</section >
+<div class="about" id="fullContent" style="display:none";data-aos="fade-left >
+  <div class= "key-features" data-aos = "flip-left">
       <h2>Key Features</h2>
       <ul>
         <li>Create and manage multiple to-do lists: Stay organized by creating separate to-do lists for work, personal tasks, or any other category you need.</li>
@@ -78,7 +78,7 @@
       
     </div>
   </div>
-  <div class="team-member">
+  <div class="team-member" data-aos="fade-left">
     <img src="static/images/ruma.jpg" alt="Ruma Roka">
     <div>
       <h3>Ruma Roka</h3>
@@ -86,7 +86,7 @@
       <button type="button"><a href="https://www.facebook.com/ruma.rokka.1">Let's Talk</a></button>
     </div>
   </div>
-  <div class="team-member">
+  <div class="team-member" data-aos="fade-right">
     <img src="static/images/kabin.jpg" alt="Kabin Munankarmi">
     <div>
       <h3>Kabin Munankarmi</h3>
@@ -94,7 +94,7 @@
       <button type="button"><a href="https://www.facebook.com/kabin.munankarmi">Let's Talk</a></button>
     </div>
   </div>
-  <div class="team-member">
+  <div class="team-member" data-aos="fade-left">
     <img src="static/images/bharat.jpg" alt="Bharat Rijal">
     <div>
       <h3>Bharat Rijal</h3>
@@ -102,7 +102,7 @@
     <button type="button"><a href="https://www.facebook.com/profile.php?id=100071550348497">Let's Talk</a></button>
     </div>
   </div>
-  <div class="team-member">
+  <div class="team-member" data-aos="fade-right">
     <img src="Rekha-Tharu.jpg" alt="Rekha Tharu">
     <div>
       <h3>Rekha Tharu</h3>
@@ -120,7 +120,7 @@
     </p>
     
   </div>
-</section> 
+      </div> 
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1; padding-top: 59px;">
   <!-- Section: Social media -->
