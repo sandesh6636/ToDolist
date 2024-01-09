@@ -71,23 +71,23 @@ $result = $conn->query($sql);
 <html>
 <head>
     <title>To-Do List</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="stylesheet" href="static/css/crud.css">
-  </head>
-
+</head>
 <body>
 <header>
         <!-- Header content here -->
         <h2 class="logo"><a href="home.php">2Do List</a></h2>
         <nav class="navigation">
-            <a href="home.php">Home</a>
-            <a href="#">About us</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-            <button type="submit" class="btn-login">
-                <a href="logout.php">Logout</a>
+            
+          <a href="chart.php">Chart</a>
+          <a href="profile.php">Profile</a>
+          <button type="submit" class="btn-login">
+              <a href="logout.php">Logout</a>
             </button>
 
         </nav>
+
     </header>
     
     <h1>To-Do List</h1>

@@ -57,7 +57,7 @@ CREATE TABLE `tasks` (
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   KEY `userId` (`userId`),
-  CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `login` (`id`)
+  CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

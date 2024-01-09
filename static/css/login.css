@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: bold;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   height:500px;
   padding-top: 200px;
+  font-weight: bold;
 
 }
 
@@ -39,7 +41,11 @@ header {
   background-color:var(--lightest-color);
   
 }
-
+#register-btn{
+  border:2px solid var(--dark-color) ;
+  padding: 10px;
+  border-radius: 23px;
+}
 .logo {
   font-size: 2rem;
 

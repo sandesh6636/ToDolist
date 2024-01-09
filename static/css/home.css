@@ -26,6 +26,7 @@
       height:100%;
       padding-top: 80px;
       /* min-height:100vh;/ */
+   
 
     }
 
@@ -238,6 +239,7 @@ flex:1;
   font-weight: 600;
   color: #202020;
 }
+<<<<<<< HEAD
 footer {
   position: fixed;
   bottom: 0;
@@ -411,3 +413,5 @@ footer {
       
 
       
+=======
+>>>>>>> update
